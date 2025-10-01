@@ -1,12 +1,13 @@
-Otoplasty Detection Project
+# Otoplasty Detection Project
 
 This project contains two Python scripts for detecting ear protrusion using either real-time video capture or manual image point selection.
 It combines OpenCV, dlib, and matplotlib to measure distances and estimate ear prominence relative to the head.
 
-⸻
+---
 
-Project Structure
+## Project Structure
 
+```text
 OTOPLASTIKA/
 │
 ├── .venv/                          # Virtual environment (optional)
@@ -18,15 +19,11 @@ OTOPLASTIKA/
 ├── detekcija2.py                   # Manual detection using image and grid
 ├── shape_predictor_68_face_landmarks.dat  # dlib facial landmark model
 
-⸻
-
 Requirements
 
 Make sure you have Python 3.8+ installed.
 Install the required libraries with:
-
 pip install opencv-python dlib matplotlib numpy
-
 Important:
 	•	You must download the shape_predictor_68_face_landmarks.dat file (if not already included).
 	•	This file is necessary for facial landmark detection and can be obtained from:
@@ -43,13 +40,9 @@ This script uses your webcam to:
 	•	Determine whether the ears are protruding (klempave) based on distance thresholds.
 	•	Estimate the distance of the face from the camera.
 
-Run
-
+Run:
 python detekcija1.py
-
 Press q to exit the camera window.
-
-⸻
 
 Script 2: Manual Image Analysis (detekcija2.py)
 
@@ -59,13 +52,13 @@ It uses a simple grid interface to:
 	•	Calculate the distances between selected points.
 	•	Determine whether the patient has protruding ears based on a custom ratio.
 
-Run
+Run:
 	1.	Replace the putanja_do_slike variable in the script with the path to your image.
 	2.	Run the script:
-
-python detekcija2.py
+	python detekcija2.py
 
 	3.	Click the following 4 points in order on the displayed image:
+
 	•	A → Left ear edge
 	•	B → Left face point near the ear
 	•	C → Nose or midline reference
@@ -78,4 +71,4 @@ The terminal will print calculated distances and a protrusion coefficient.
 Notes
 	•	The detection methods are simplified and not meant for medical diagnosis.
 	•	Lighting and camera calibration can affect accuracy.
-	•	Adjust focal_length and real_face_height in detekcija1.py to match your camera setup
+	•	Adjust focal_length and real_face_height in detekcija1.py to match your camera setup.
